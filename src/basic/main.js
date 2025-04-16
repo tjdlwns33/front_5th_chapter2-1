@@ -20,7 +20,7 @@ function main() {
   `;
   root.innerHTML = main;
 
-  getElements(); //elements 가져오기
+  getAllElements(); //elements 가져오기
   setEventListeners(); // 이벤트 리스너 설정
   updateSelectOptions(); // 셀렉트 옵션 설정
   calcCart(); // 장바구니 계산
