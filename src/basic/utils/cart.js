@@ -1,4 +1,4 @@
-import { productList } from "../productData";
+import { productList } from "../products";
 import { store } from "../store";
 
 // 할인 정보

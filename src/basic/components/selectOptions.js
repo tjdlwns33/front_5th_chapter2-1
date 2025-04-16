@@ -1,4 +1,4 @@
-import { productList } from "../productData";
+import { productList } from "../products";
 import { store } from "../store";
 
 // 셀렉트 옵션 설정

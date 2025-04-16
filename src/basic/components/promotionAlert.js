@@ -1,4 +1,4 @@
-import { productList } from "../productData";
+import { productList } from "../products";
 import { store } from "../store";
 
 // 프로모션 알림
