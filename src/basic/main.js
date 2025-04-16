@@ -1,6 +1,6 @@
 import { promotionAlert } from "./components/promotionAlert";
 import { updateSelectOptions } from "./components/selectOptions";
-import { getElements } from "./elements";
+import { getAllElements } from "./elements";
 import { setEventListeners } from "./events";
 import { calcCart } from "./utils/cart";
 
