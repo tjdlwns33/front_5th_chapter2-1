@@ -34,18 +34,13 @@ export function calcCart() {
     store.totalAmount += itemTotal * (1 - discount);
   }
 
-  let discountRate = 0;
-  let discount = subTotal - store.totalAmount;
+  let discountRate = (subTotal - store.totalAmount) / subTotal;
   if (store.itemCount >= 30) {
     let bulkDiscount = store.totalAmount * 0.25;
-    if (bulkDiscount > discount) {
+    if (bulkDiscount > subTotal - store.totalAmount) {
       store.totalAmount = subTotal * 0.75;
       discountRate = 0.25;
-    } else {
-      discountRate = discount / subTotal;
     }
-  } else {
-    discountRate = discount / subTotal;
   }
 
   if (new Date().getDay() === 2) {
@@ -137,7 +132,7 @@ function addNewCartItem(product) {
       <div>
         <button class="quantity-change bg-blue-500 text-white px-2 py-1 rounded mr-1" data-product-id="${product.id}" data-change="-1">-</button>
         <button class="quantity-change bg-blue-500 text-white px-2 py-1 rounded mr-1" data-product-id="${product.id}" data-change="1">+</button>
-        <button class="remove-item bg-red-500 text-white px-2 py-1 rounded" data-product-id="${product.id}">삭제</button></div>
+        <button class="remove-item bg-red-500 text-white px-2 py-1 rounded" data-product-id="${product.id}">삭제</button>
       </div>
     </div>
   `;
